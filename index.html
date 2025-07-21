@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Laboratory</title>
+    <!-- This links to the CSS file that handles the design -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- This is the password screen that appears first -->
+    <div id="password-overlay">
+        <div id="password-box">
+            <h2>Authentication Required</h2>
+            <p>Enter Access Code to Proceed</p>
+            <input type="password" id="password-input" placeholder="ACCESS CODE">
+            <button onclick="checkPassword()">AUTHENTICATE</button>
+            <p id="error-message"></p>
+        </div>
+    </div>
+
+    <!-- This is the main content of the site, hidden until the password is correct -->
+    <div id="main-content" style="display: none;">
+        
+        <!-- Header Section -->
+        <header>
+            <h1>The Fixation: A Private Study of You</h1>
+            <p class="subtitle">This place exists for one reason: to document my obsession with you. Every part of you. This is a testament to the effect you have on me.</p>
+        </header>
+
+        <main>
+            <!-- Section 1: Anatomy of Desire -->
+            <section id="subject-profile">
+                <h2>An Anatomy of Desire</h2>
+                <div class="profile-grid">
+                    <div class="grid-item">
+                        <h3>The Way Your Skin Flushes</h3>
+                        <p>I love watching that warmth spread across your chest when I kiss your neck. It’s my favorite color, a sign that I’m affecting you, and it makes me want to chase that blush all over your body.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>The Sounds You Make</h3>
+                        <p>That little sigh you let out when I pull you close. The sharp intake of breath when my hand slides down your back. I collect these sounds. They play in my head all day, a private soundtrack of my need for you.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>The Look In Your Eyes</h3>
+                        <p>Just before we kiss, when your eyes go dark and soft and your lips part just a little. In that split second, I know you want me, and the certainty of it drives me absolutely wild.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>My Favorite Places to Touch</h3>
+                        <p>The soft, untouched skin of your inner thighs. The perfect curve of your hip under my hand. The nape of your neck where I can feel your pulse jump just for me. I have them all memorized.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: The Agenda -->
+            <section id="experiment-log">
+                <h2>The Agenda: Unfinished Business</h2>
+                <div class="experiment">
+                    <h3>Item #1: The Blindfold</h3>
+                    <p><strong>The Plan:</strong> I want to take away your sight, just for a little while. So all you can feel is my hands, my mouth, exploring every inch of you. No distractions, no expectations, just pure feeling until you can't take it anymore.</p>
+                    <p><strong>Status:</strong> <span class="status-proposed">Pending</span></p>
+                </div>
+                <div class="experiment">
+                    <h3>Item #2: The Things I'll Whisper</h3>
+                    <p><strong>The Plan:</strong> There are things I need to tell you, things I want to ask you to do, that are only for when my lips are right against your ear. I want to feel you shiver when you hear them, and I want you to do every single one.</p>
+                    <p><strong>Status:</strong> <span class="status-proposed">Pending</span></p>
+                </div>
+                 <div class="experiment">
+                    <h3>Item #3: Fire & Ice</h3>
+                    <p><strong>The Plan:</strong> I want to trace patterns on your skin with a single piece of ice until you're gasping, then follow that same cold path with my warm mouth and make you melt all over again. A test of your endurance.</p>
+                    <p><strong>Status:</strong> <span class="status-proposed">Pending</span></p>
+                </div>
+            </section>
+
+            <!-- Section 3: The Menu -->
+            <section id="kink-index">
+                <h2>The Menu: What Are You Craving?</h2>
+                <p class="subtitle">This isn't a test. It's a menu of possibilities. Tell me what you want.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>The Craving</th>
+                            <th>The Fantasy</th>
+                            <th>Your Mood</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Being Tied Up</td>
+                            <td>The feeling of being held, tied, and completely possessed. Giving up control so you can just feel.</td>
+                            <td class="status-buttons">
+                                <button class="btn-ni">Not for me</button>
+                                <button class="btn-c">Maybe...</button>
+                                <button class="btn-r">I want this</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Being In Control</td>
+                            <td>The power of telling me exactly what to do, how to touch you, and watching me obey your every command.</td>
+                            <td class="status-buttons">
+                                <button class="btn-ni">Not for me</button>
+                                <button class="btn-c">Maybe...</button>
+                                <button class="btn-r">I want this</button>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>Being Watched</td>
+                            <td>The thrill of putting on a show, knowing my eyes are on every move you make. The vulnerability and the power of it.</td>
+                            <td class="status-buttons">
+                                <button class="btn-ni">Not for me</button>
+                                <button class="btn-c">Maybe...</button>
+                                <button class="btn-r">I want this</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Playing a Part</td>
+                            <td>Escaping into a fantasy. Being strangers meeting for the first time, or any other scenario where we can be whoever we want for a night.</td>
+                            <td class="status-buttons">
+                                <button class="btn-ni">Not for me</button>
+                                <button class="btn-c">Maybe...</button>
+                                <button class="btn-r">I want this</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>PRIVATE // YOU. ME. ALWAYS. // [YOUR INITIALS] + [HER INITIALS]</p>
+        </footer>
+    </div>
+
+    <!-- This links to the JavaScript file that handles the password and button logic -->
+    <script src="script.js"></script>
+</body>
+</html>
